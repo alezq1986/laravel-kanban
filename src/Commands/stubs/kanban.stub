@@ -2,9 +2,9 @@
 
 namespace DummyNamespace;
 
-use JinoAntony\Kanban\KItem;
-use JinoAntony\Kanban\Kanban;
-use JinoAntony\Kanban\KBoard;
+use AleZQ\Kanban\KItem;
+use AleZQ\Kanban\Kanban;
+use AleZQ\Kanban\KBoard;
 
 class DummyClass extends Kanban
 {

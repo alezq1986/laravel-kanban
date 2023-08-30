@@ -1,6 +1,6 @@
 <?php
 
-namespace JinoAntony\Kanban;
+namespace AleZQ\Kanban;
 
 abstract class Kanban
 {

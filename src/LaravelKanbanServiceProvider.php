@@ -1,9 +1,9 @@
 <?php
 
-namespace JinoAntony\Kanban;
+namespace AleZQ\Kanban;
 
 use Illuminate\Support\ServiceProvider;
-use JinoAntony\Kanban\Commands\KanbanMakeCommand;
+use AleZQ\Kanban\Commands\KanbanMakeCommand;
 
 class LaravelKanbanServiceProvider extends ServiceProvider
 {

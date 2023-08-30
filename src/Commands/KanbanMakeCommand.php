@@ -1,6 +1,6 @@
 <?php
 
-namespace JinoAntony\Kanban\Commands;
+namespace AleZQ\Kanban\Commands;
 
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
