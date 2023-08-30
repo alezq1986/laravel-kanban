@@ -1,15 +1,16 @@
 {
-    "name": "jinoantony/laravel-kanban",
+    "name": "alezq1986/laravel-kanban",
     "description": "Kanban boards for laravel",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jino Antony",
-            "email": "jinoantony99@gmail.com"
+            "name": "Alexandre Queiroz",
+            "email": "alexandre.zugaibdequeiroz@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
         "php": "^7.0",
         "illuminate/filesystem": "5.5.*|^6|^7",
@@ -17,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-            "JinoAntony\\Kanban\\": "src/"
+            "AleZQ\\Kanban\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "JinoAntony\\Kanban\\LaravelKanbanServiceProvider"
+                "AleZQ\\Kanban\\LaravelKanbanServiceProvider"
             ]
         }
     }
