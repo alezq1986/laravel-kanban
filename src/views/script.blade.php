@@ -20,14 +20,38 @@
             customCssIconHandler: "drag_handler_icon",                   // when customHandler is undefined, jKanban will use this property to set main icon handler class. If you want, you can use font icon libraries here
             customHandler       : "<span class='item_handle'>+</span> %s"// your entirely customized handler. Use %s to position item title
         },
-        click            : function (el) { kanbanClick(el);},                             // callback when any board's item are clicked
-        context          : function (el, event) { kanbanContext(el, event); },                      // callback when any board's item are right clicked
-        dragEl           : function (el, source) { kanbanDragEl (el, source); },                     // callback when any board's item are dragged
-        dragendEl        : function (el) { kanbanDragendEl(el) },                             // callback when any board's item stop drag
-        dropEl           : function (el, target, source, sibling) { kanbanDropEl(el, target, source, sibling); },    // callback when any board's item drop in a board
-        dragBoard        : function (el, source) { kanbanDragBoard(el, source); },                     // callback when any board stop drag
-        dragendBoard     : function (el) { kanbanDragendBoard(el); },                             // callback when any board stop drag
-        buttonClick      : function(el, boardId) { kanbanButtonClick(el, boardId); },                      // callback when the board's button is clicked
-        propagationHandlers: [],                                         // the specified callback does not cancel the browser event. possible values: "click", "context"
+        click            : function (el) {
+            if (typeof kanbanClick === "function") {
+                kanbanClick(el);
+            }},                             // callback when any board's item are clicked
+        context          : function (el, event) {
+            if (typeof kanbanContext === "function") {
+                kanbanContext(el, event);
+            }},                      // callback when any board's item are right clicked
+        dragEl           : function (el, source) {
+            if (typeof kanbanDragEl === "function") {
+                kanbanDragEl (el, source);
+            }},                     // callback when any board's item are dragged
+        dragendEl        : function (el) {
+            if (typeof kanbanDragendEl === "function") {
+                kanbanDragendEl(el)
+            }},                             // callback when any board's item stop drag
+        dropEl           : function (el, target, source, sibling) {
+            if (typeof kanbanDropEl === "function") {
+                kanbanDropEl(el, target, source, sibling);
+            }},    // callback when any board's item drop in a board
+        dragBoard        : function (el, source) {
+            if (typeof kanbanDragBoard === "function") {
+                kanbanDragBoard(el, source);
+            }},                     // callback when any board stop drag
+        dragendBoard     : function (el) {
+            if (typeof kanbanDragendBoard === "function") {
+                kanbanDragendBoard(el);
+            }},                             // callback when any board stop drag
+        buttonClick      : function(el, boardId) {
+            if (typeof kanbanButtonClick === "function") {
+                kanbanButtonClick(el, boardId);
+            }},                      // callback when the board's button is clicked
+        propagationHandlers: [],                                      // the specified callback does not cancel the browser event. possible values: "click", "context"
     })
 </script>
