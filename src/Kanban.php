@@ -218,7 +218,7 @@ abstract class Kanban
     {
         return view('laravel-kanban::script', [
             'element' => $this->element,
-            'margin' => $this->gutter,
+            'gutter' => $this->gutter,
             'width' => $this->width,
             'boards' => $this->formatBoards(),
             'jsObjName' => $this->jsObjName,
