@@ -1,7 +1,7 @@
 <script>
     var {{ $jsObjName }} = new jKanban({
         element          : '{{ $element }}',                             // selector of the kanban container
-        gutter           : '{{ $margin }}',                              // gutter of the board
+        gutter           : '{{ $gutter }}',                              // gutter of the board
         widthBoard       : '{{ $width }}',                               // width of the board
         responsivePercentage: @json($isResponsive),                      // if it is true I use percentage in the width of the boards and it is not necessary gutter and widthBoard
         dragItems        : @json($dragItems),                            // if false, all items are not draggable

@@ -86,12 +86,12 @@ abstract class Kanban
     /**
      * Set the margin between boards
      *
-     * @param string $margin
+     * @param string $gutter
      * @return $this
      */
-    public function margin(string $margin)
+    public function gutter(string $gutter)
     {
-        $this->margin = $margin;
+        $this->gutter = $gutter;
 
         return $this;
     }
